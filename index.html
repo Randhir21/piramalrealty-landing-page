@@ -2437,7 +2437,7 @@
                 Subject: "New Enquery from piramalrealty.netlify.app",
                 Body: `Name: ${name}<br>Email: ${email}<br>Mob Number: ${mobile}`,
             }).then(
-                (message) => alert(message)).catch((error)=>console.log(error));
+                {message ? (window.location.href = "thanks.html") : alert(message);}).catch((error)=>console.log(error));
 
                 // Reset the form fields (optional)
                 event.target.reset();
